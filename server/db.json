@@ -1,0 +1,43 @@
+{
+    "employee": [
+      {
+        "id": 1,
+        "name": "Mark Taylor",
+        "gender": "male",
+        "department": [
+          "HR",
+          "Sales",
+          "Finance",
+          "Engineer"
+        ],
+        "salary": "500000",
+        "startDate": "29 Oct 2019",
+        "notes": "All in One",
+        "profilePic": "../assets/profile-imgs/Ellipse -3.png"
+      },
+      {
+        "id": 2,
+        "name": "Bill Gates",
+        "gender": "male",
+        "department": [
+          "Engineer"
+        ],
+        "salary": "400000",
+        "startDate": "29 Oct 2019",
+        "notes": "Terrific Engineer",
+        "profilePic": "../assets/profile-imgs/Ellipse -9.png"
+      },
+      {
+        "name": "Zoya Sanjeev",
+        "gender": "female",
+        "department": [
+          "Sales"
+        ],
+        "salary": "400000",
+        "startDate": "17 Oct 2021",
+        "notes": "",
+        "profilePic": "../assets/profile-imgs/Ellipse -1.png",
+        "id": 3
+      }
+    ]
+  }
