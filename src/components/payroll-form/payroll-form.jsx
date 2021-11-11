@@ -1,11 +1,11 @@
 import React, {userState, useEffect} from 'react';
-import profile1 from "../assets/profile-images/Ellipse -1.png";
-import profile2 from "../assets/profile-images/Ellipse -2.png";
-import profile3 from "../assets/profile-images/Ellipse -3.png";
-import profile4 from "../assets/profile-images/Ellipse -4.png";
-import profile5 from "../assets/profile-images/Ellipse -5.png";
-import profile6 from "../assets/profile-images/Ellipse -7.png";
-import "./payrollForm.scss";
+import profile1 from "../../../assets/profile-images/Ellipse -1.png";
+import profile2 from "../../../assets/profile-images/Ellipse -2.png";
+import profile3 from "../../../assets/profile-images/Ellipse -3.png";
+import profile4 from "../../../assets/profile-images/Ellipse -4.png";
+import profile5 from "../../../assets/profile-images/Ellipse -5.png";
+import profile6 from "../../../assets/profile-images/Ellipse -7.png";
+import "./payroll-form.scss";
 import {useParams, Link, withRouter} from 'react-router-dom';
 
 export default class PayrollForm extends React.Component {
