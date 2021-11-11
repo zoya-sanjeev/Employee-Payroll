@@ -1,10 +1,10 @@
 import React, {userState, useEffect} from 'react';
-import profile1 from "../../assets/profile-images/Ellipse -1.png";
-import profile2 from "../../assets/profile-images/Ellipse -2.png";
-import profile3 from "../../assets/profile-images/Ellipse -3.png";
-import profile4 from "../../assets/profile-images/Ellipse -4.png";
-import profile5 from "../../assets/profile-images/Ellipse -5.png";
-import profile6 from "../../assets/profile-images/Ellipse -7.png";
+import profile1 from "../assets/profile-images/Ellipse -1.png";
+import profile2 from "../assets/profile-images/Ellipse -2.png";
+import profile3 from "../assets/profile-images/Ellipse -3.png";
+import profile4 from "../assets/profile-images/Ellipse -4.png";
+import profile5 from "../assets/profile-images/Ellipse -5.png";
+import profile6 from "../assets/profile-images/Ellipse -7.png";
 import "./payrollForm.scss";
 import {useParams, Link, withRouter} from 'react-router-dom';
 
@@ -132,23 +132,23 @@ return(
                     <label className="label text" htmlFor="profileUrl">Profile image</label>
                     <div className="profile-radio-button">
                         <label>
-                            <input type="radio" checked={formValue.profileUrl=='../../assets/profile-images/Ellipse -3.png'} name="profileurl"
-                                value="../../assets/profile-images/Ellipse -3.png" onChange={changeValue} />
+                            <input type="radio" checked={formValue.profileUrl=='../../assets/profile-imgs/Ellipse -3.png'} name="profileurl"
+                                value="../../assets/profile-imgs/Ellipse -3.png" onChange={changeValue} />
                             <img className="profile" src={profilel} />
                         </label>
                         <label>
-                            <input type="radio" name="profileurl" checked={formValue.profileUrl=='../../assets/profile-images/Ellipse 1.png'}
-                                value="../../assets/profile-images/Ellipse 1.png" onChange={changeValue} />
+                            <input type="radio" name="profileurl" checked={formValue.profileUrl=='../../assets/profile-imgs/Ellipse 1.png'}
+                                value="../../assets/profile-imgs/Ellipse 1.png" onChange={changeValue} />
                             <img className="profile" src={profile2} />
                         </label>
                         <label>
-                            <input type="radio" name="profileurl" checked={formValue.profileurl=='../../assets/profile-images/Ellipse -8.png'}
-                                value="../../assets/profile-images/Ellipse -8.png" onChange={changeValue} />
+                            <input type="radio" name="profileurl" checked={formValue.profileurl=='../../assets/profile-imgs/Ellipse -8.png'}
+                                value="../../assets/profile-imgs/Ellipse -8.png" onChange={changeValue} />
                             <img className="profile" src={profile3} />
                         </label>
                         <label>
-                            <input type="radio" name="profileurl" checked={formValue.profileUrl=='../../assets/profile-images/Ellipse -7.png' }
-                                value="../../assets/profile-images/Ellipse -7.png" onChange={changeValue} />
+                            <input type="radio" name="profileurl" checked={formValue.profileUrl=='../../assets/profile-imgs/Ellipse -7.png' }
+                                value="../../assets/profile-imgs/Ellipse -7.png" onChange={changeValue} />
                             <img className="profile" src={profile4} />
                         </label>
                     </div>
