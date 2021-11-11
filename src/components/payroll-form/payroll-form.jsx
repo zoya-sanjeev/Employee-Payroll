@@ -7,6 +7,7 @@ import profile5 from "../../../assets/profile-images/Ellipse -5.png";
 import profile6 from "../../../assets/profile-images/Ellipse -7.png";
 import "./payroll-form.scss";
 import {useParams, Link, withRouter} from 'react-router-dom';
+import EmployeeService from '../../services/employee-services';
 
 export default class PayrollForm extends React.Component {
     constructor(props) {
@@ -29,7 +30,23 @@ export default class PayrollForm extends React.Component {
     }
   
     save = () => {
-      alert(JSON.stringify(this.state));
+        event.preventDefault();
+       let object = {
+           name : formValue.name,
+           department : formValue.department,
+           gender : formValue.gender,
+           salary : formValue.salary,
+           startDate : formValue.startDate,
+           notes : formValue.notes,
+           id : formValue.id,
+           profileUrl : formValue.profileUrl
+       }
+       EmployeeService.addEmployee(object).then(data => {
+           console.log("data added");
+           this.props.history.push('')
+       }).catch(err =>{
+           console.log("error");
+       })
     };
   
     reset = () => {
