@@ -1,6 +1,122 @@
 import React, {userState, useEffect} from 'react';
+import profile1 from "../../assets/profile-images/Ellipse -1.png";
+import profile2 from "../../assets/profile-images/Ellipse -2.png";
+import profile3 from "../../assets/profile-images/Ellipse -3.png";
+import profile4 from "../../assets/profile-images/Ellipse -4.png";
+import profile5 from "../../assets/profile-images/Ellipse -5.png";
+import profile6 from "../../assets/profile-images/Ellipse -7.png";
+import "./payrollForm.scss";
 import {useParams, Link, withRouter} from 'react-router-dom';
 
+export default class PayrollForm extends React.Component {
+    constructor(props) {
+      super(props);
+  
+      this.state = {
+        name: "",
+        profileUrl: "",
+        gender: "",
+        departments: [],
+        salary: 300000,
+        day: "Day",
+        month: "Month",
+        year: "Year",
+        notes: "",
+        nameError: "",
+        dateError: "",
+      };
+      this.departmentArray = [];
+    }
+  
+    save = () => {
+      alert(JSON.stringify(this.state));
+    };
+  
+    reset = () => {
+      this.setState({
+        name: "",
+        profileUrl: "",
+        gender: "",
+        departments: [],
+        salary: 300000,
+        day: "Day",
+        month: "Month",
+        year: "Year",
+        notes: "",
+        nameError: "",
+        dateError: "",
+      });
+    };
+  
+    handleRadio = (profile) => {
+      this.setState({ [profile.target.name]: profile.target.value });
+    };
+  
+    handleCheckBox = (element) => {
+      if (!element.target.checked) {
+        let index = this.departmentArray.indexOf(element.target.value);
+        this.departmentArray.splice(index, 1);
+      } else {
+        if (!this.departmentArray.includes(element.target.value)) {
+          this.departmentArray.push(element.target.value);
+        }
+      }
+      this.setState({ [element.target.name]: this.departmentArray });
+    };
+  
+    handleInputChange = (element) => {
+      this.setState({
+        [element.target.id]: element.target.value,
+      });
+  
+      if (element.target.id == "name") {
+        try {
+          checkName(element.target.value);
+          this.setState({ nameError: "" });
+        } catch (error) {
+          this.setState({ nameError: error });
+        }
+  
+        if (element.target.value == "") {
+          this.setState({ nameError: "" });
+        }
+      }
+  
+      if (element.target.id == "day") {
+        try {
+          checkStartDate(
+            new Date(this.state.year, this.state.month - 1, element.target.value)
+          );
+          this.setState({ dateError: "" });
+        } catch (error) {
+          this.setState({ dateError: error });
+        }
+      }
+  
+      if (element.target.id == "month") {
+        try {
+          checkStartDate(
+            new Date(this.state.year, element.target.value - 1, this.state.day)
+          );
+          this.setState({ dateError: "" });
+        } catch (error) {
+          this.setState({ dateError: error });
+        }
+      }
+  
+      if (element.target.id == "year") {
+        try {
+          checkStartDate(
+            new Date(element.target.value, this.state.month - 1, this.state.day)
+          );
+          this.setState({ dateError: "" });
+        } catch (error) {
+          this.setState({ dateError: error });
+        }
+      }
+    };
+  
+    render() {
 return(
     <div className="payroll-main">
         <Toolbar />
@@ -90,7 +206,8 @@ return(
     </form>
     </div>
 </div>
-)
 
+);
+}
+}
 
-export default withRouter(PayrollForm);
