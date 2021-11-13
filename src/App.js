@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
+import Home from './components/home/home'
 import PayrollForm from './components/payroll-form/Payrollform';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 

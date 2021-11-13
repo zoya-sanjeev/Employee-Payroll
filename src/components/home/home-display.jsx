@@ -2,7 +2,7 @@ import React from 'react';
 import './home.scss';
 import deleteIcon from '../../assets/icons/delete-black-18dp.svg';
 import editIcon from '../../assets/icons/create-black-18dp.svg';
-import profile1 from '../../assets/profile-images/Ellipse -3.png';
+import profile1 from '../../assets/profile-imgs/Ellipse -3.png';
 
 const Display = (props) => {
     return (
