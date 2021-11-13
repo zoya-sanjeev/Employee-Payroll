@@ -19,7 +19,7 @@ const Payrollform = (props) => {
         allDepartments: [
             'HR', 'Sales', 'Finance', 'Engineer', 'Others'
         ],
-        departmentValues: [],
+        department: [],
         gender: '',
         salary: '',
         day: '1',
@@ -49,17 +49,17 @@ const Payrollform = (props) => {
     }
 
     const onCheckChange = (name) => {
-        let index = formValue.departmentValues.indexOf(name);
-        let checkArray = [...formValue.departmentValues]
+        let index = formValue.department.indexOf(name);
+        let checkArray = [...formValue.department]
         if (index > -1)
             checkArray.splice(index, 1)
         else
             checkArray.push(name);
-        setForm({ ...formValue, departmentValues: checkArray });
+        setForm({ ...formValue, department: checkArray });
     }
 
     const getChecked = (name) => {
-        return formValue.departmentValues && formValue.departmentValues.includes(name);
+        return formValue.department && formValue.department.includes(name);
     }
 
     const validData = async () => {
@@ -88,7 +88,7 @@ const Payrollform = (props) => {
             error.name = 'Profile is required field'
             isError = true;
         }
-        if (formValue.departmentValues.length < 1) {
+        if (formValue.department.length < 1) {
             error.name = 'Department is required field'
             isError = true;
         }
@@ -118,7 +118,7 @@ const Payrollform = (props) => {
 
         let object = {
             name: formValue.name,
-            departmentValues: formValue.departmentValues,
+            department: formValue.department,
             gender: formValue.gender,
             salary: formValue.salary,
             startDate: `${formValue.day} ${formValue.month} ${formValue.year}`,

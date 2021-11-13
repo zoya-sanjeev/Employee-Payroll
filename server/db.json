@@ -41,7 +41,7 @@
     },
     {
       "name": "Priya",
-      "departmentValues": [
+      "department": [
         "Sales",
         "Finance"
       ],
@@ -51,6 +51,32 @@
       "notes": "note",
       "id": 4,
       "profileUrl": "../../assets/profile-images/Ellipse 1.png"
+    },
+    {
+      "name": "Reethu",
+      "department": [
+        "HR",
+        "Sales"
+      ],
+      "gender": "Female",
+      "salary": "480000",
+      "startDate": "1 Jan 2021",
+      "notes": "notess",
+      "id": 5,
+      "profileUrl": "../../assets/profile-images/Ellipse -7.png"
+    },
+    {
+      "name": "Rahul",
+      "department": [
+        "Finance",
+        "Engineer"
+      ],
+      "gender": "Male",
+      "salary": "490000",
+      "startDate": "1 Jan 2021",
+      "notes": "notess",
+      "id": 6,
+      "profileUrl": "../../assets/profile-images/Ellipse -3.png"
     }
   ]
 }
