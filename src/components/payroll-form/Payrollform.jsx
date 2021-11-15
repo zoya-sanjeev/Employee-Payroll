@@ -8,6 +8,10 @@ import './payroll-form.scss';
 import logo from '../../assets/logo.png';
 import EmployeeService from '../../services/EmployeeService'
 const Payrollform = (props) => {
+    if (window.location.pathname !== "/update") {
+        localStorage.setItem("employeeData", null);
+    }
+    const employeeData = JSON.parse(localStorage.getItem("employeeData"));
     let initialValue = {
         name: '',
         profileArray: [
@@ -41,8 +45,18 @@ const Payrollform = (props) => {
     }
     const employeeService = new EmployeeService();
 
-    const [formValue, setForm] = useState(initialValue);
+    let [formValue, setForm] = useState(initialValue);
     const [displayMessage, setDisplayMessage] = useState("");
+
+    if (employeeData) {
+        formValue.name = employeeData.name;
+        formValue.profileUrl = employeeData.profileUrl;
+        formValue.gender = employeeData.gender;
+        formValue.department = employeeData.department;
+        formValue.salary = employeeData.salary;
+        formValue.startDate = employeeData.startDate;
+        formValue.salary = employeeData.salary;
+    }
 
     const changeValue = (event) => {
         setForm({ ...formValue, [event.target.name]: event.target.value });
