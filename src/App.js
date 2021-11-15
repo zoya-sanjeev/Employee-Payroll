@@ -12,6 +12,7 @@ function App() {
           <Route path="/" element={<PayrollForm />} />
           <Route path="/home" element={<Home />} />
           <Route path="/home/Payrollform" element={<PayrollForm />} />
+          <Route exact path="/update/:id" element={<PayrollForm />}></Route>
         </Routes>
       </BrowserRouter>
     </div>

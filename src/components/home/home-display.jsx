@@ -1,12 +1,13 @@
 import React from 'react';
 import './home.scss';
-import employeeService from '../../services/EmployeeService';
+import { Link } from 'react-router-dom';
+import EmployeeService from '../../services/EmployeeService';
 import deleteIcon from '../../assets/icons/delete-black-18dp.svg';
 import editIcon from '../../assets/icons/create-black-18dp.svg';
-import profile1 from '../../assets/profile-imgs/Ellipse -3.png';
-import profile2 from '../../assets/profile-imgs/Ellipse -1.png';
-import profile3 from '../../assets/profile-imgs/Ellipse -8.png';
-import profile4 from '../../assets/profile-imgs/Ellipse -7.png';
+import profile1 from '../../assets/profile-images/Ellipse -3.png';
+import profile2 from '../../assets/profile-images/Ellipse -1.png';
+import profile3 from '../../assets/profile-images/Ellipse -8.png';
+import profile4 from '../../assets/profile-images/Ellipse -7.png';
 
 const Display = (props) => {
     var imgUrl;
@@ -32,6 +33,7 @@ var loadImg=(img) =>{
         imgUrl = profile4
     }
 }
+    const employeeService = new EmployeeService()
     const update = (id) => {
         let employeeData;
         employeeService.getEmployee(id).then(data => {
@@ -73,7 +75,10 @@ var loadImg=(img) =>{
                             <td> ₹ {employee.salary}</td>
                             <td>{employee.startDate}</td>
                             <td><img src={deleteIcon} onClick={() => remove(employee.id)} alt="delete" />
-                                <img src={editIcon} onClick={() => update(employee.id)} alt="edit" /></td>
+                            <Link    className="btn btn-info" 
+                                                        to={`/update/${employee.id}`} >
+                                    <img alt="edit" src={editIcon} />
+                                </Link></td>
                         </tr>
                     ))
                 }

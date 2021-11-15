@@ -1,96 +1,18 @@
 {
   "employee": [
     {
-      "id": 1,
-      "name": "Mark Taylor",
-      "gender": "male",
-      "department": [
-        "HR",
-        "Sales",
-        "Finance",
-        "Engineer"
-      ],
-      "salary": "500000",
-      "startDate": "29 Oct 2019",
-      "notes": "All in One",
-      "profilePic": "../assets/profile-imgs/Ellipse -3.png"
-    },
-    {
-      "id": 2,
-      "name": "Bill Gates",
-      "gender": "male",
-      "department": [
-        "Engineer"
-      ],
-      "salary": "400000",
-      "startDate": "29 Oct 2019",
-      "notes": "Terrific Engineer",
-      "profilePic": "../assets/profile-imgs/Ellipse -9.png"
-    },
-    {
       "name": "Zoya Sanjeev",
-      "gender": "female",
-      "department": [
-        "Sales"
-      ],
-      "salary": "400000",
-      "startDate": "17 Oct 2021",
-      "notes": "",
-      "profilePic": "../assets/profile-imgs/Ellipse -1.png",
-      "id": 3
-    },
-    {
-      "name": "Priya",
       "department": [
         "Sales",
-        "Finance"
+        "Finance",
+        "Engineer"
       ],
       "gender": "Female",
-      "salary": "450000",
+      "salary": "500000",
       "startDate": "1 Jan 2021",
-      "notes": "note",
-      "id": 4,
-      "profileUrl": "../../assets/profile-images/Ellipse 1.png"
-    },
-    {
-      "name": "Reethu",
-      "department": [
-        "HR",
-        "Sales"
-      ],
-      "gender": "Female",
-      "salary": "480000",
-      "startDate": "1 Jan 2021",
-      "notes": "notess",
-      "id": 5,
+      "notes": "notes!",
+      "id": 1,
       "profileUrl": "../../assets/profile-images/Ellipse -7.png"
-    },
-    {
-      "name": "Rahul",
-      "department": [
-        "Finance",
-        "Engineer"
-      ],
-      "gender": "Male",
-      "salary": "490000",
-      "startDate": "1 Jan 2021",
-      "notes": "notess",
-      "id": 6,
-      "profileUrl": "../../assets/profile-images/Ellipse -3.png"
-    },
-    {
-      "name": "Hermione",
-      "department": [
-        "Sales",
-        "Finance",
-        "Engineer"
-      ],
-      "gender": "Female",
-      "salary": "490000",
-      "startDate": "1 Jan 2021",
-      "notes": "no notes",
-      "id": 7,
-      "profileUrl": "../../assets/profile-images/Ellipse 1.png"
     }
   ]
 }
