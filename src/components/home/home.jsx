@@ -48,7 +48,7 @@ class Home extends React.Component {
                                 {this.state.employeeArray.length}
                             </div>
                         </div>
-                        <Link to="payroll-form" className="add-button">
+                        <Link to="Payrollform" className="add-button">
                             <img src={addIcon} alt="Add Button" />Add User
                         </Link>
                     </div>

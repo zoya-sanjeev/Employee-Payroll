@@ -11,6 +11,7 @@ function App() {
         <Routes>
           <Route path="/" element={<PayrollForm />} />
           <Route path="/home" element={<Home />} />
+          <Route path="/home/Payrollform" element={<PayrollForm />} />
         </Routes>
       </BrowserRouter>
     </div>

@@ -77,6 +77,20 @@
       "notes": "notess",
       "id": 6,
       "profileUrl": "../../assets/profile-images/Ellipse -3.png"
+    },
+    {
+      "name": "Hermione",
+      "department": [
+        "Sales",
+        "Finance",
+        "Engineer"
+      ],
+      "gender": "Female",
+      "salary": "490000",
+      "startDate": "1 Jan 2021",
+      "notes": "no notes",
+      "id": 7,
+      "profileUrl": "../../assets/profile-images/Ellipse 1.png"
     }
   ]
 }

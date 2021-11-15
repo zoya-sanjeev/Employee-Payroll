@@ -129,10 +129,9 @@ const Payrollform = (props) => {
 
         employeeService.addEmployee(object).then(data => {
             setDisplayMessage("Successfully added user");
-            console.log("Successfully added user");
             setTimeout(() => {
-                setDisplayMessage("");
-            }, 5000);
+                window.location.replace("/home");
+            }, 1000);
             })
 
         .catch(error => {
