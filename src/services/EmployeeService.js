@@ -20,4 +20,7 @@ export default class EmployeeService {
         console.log(data)
         return AxiosService.putService(`${this.baseUrl}employee/${id}`,data);
     }
+    deleteEmployee(id) {
+        return AxiosService.deleteService(`${this.baseUrl}EmployeePayrollDB/${id}`);
+    }
 }
