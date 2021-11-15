@@ -21,6 +21,6 @@ export default class EmployeeService {
         return AxiosService.putService(`${this.baseUrl}employee/${id}`,data);
     }
     deleteEmployee(id) {
-        return AxiosService.deleteService(`${this.baseUrl}EmployeePayrollDB/${id}`);
+        return AxiosService.deleteService(`${this.baseUrl}employee/${id}`);
     }
 }

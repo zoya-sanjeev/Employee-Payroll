@@ -50,6 +50,14 @@ var loadImg=(img) =>{
         window.location.replace("/update");
 
     }
+    const remove = (id) => {
+        employeeService.deleteEmployee(id).then(data => {
+            console.log("Deleted data: ", data);
+        }).catch(error => {
+            console.log("Error after ", error);
+        });
+        window.location.replace("/home");
+    }
     
     return (
         <table id="display" className="table">
@@ -86,8 +94,7 @@ var loadImg=(img) =>{
         </table>
     )
 }
-const remove = (id) => {
-}
+
 
 
 export default Display;

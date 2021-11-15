@@ -1,18 +1,17 @@
 {
   "employee": [
     {
-      "name": "Zoya Sanjeev",
+      "name": "Draco Malfoy",
       "department": [
         "Sales",
-        "Finance",
-        "Engineer"
+        "Finance"
       ],
-      "gender": "Female",
+      "gender": "Male",
       "salary": "500000",
-      "startDate": "1 Jan 2021",
-      "notes": "notes!",
-      "id": 1,
-      "profileUrl": "../../assets/profile-images/Ellipse -7.png"
+      "startDate": "2021 Jan 1",
+      "notes": "notes",
+      "id": 2,
+      "profileUrl": "../../assets/profile-images/Ellipse -8.png"
     }
   ]
 }

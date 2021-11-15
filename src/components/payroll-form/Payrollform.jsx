@@ -1,5 +1,5 @@
 import profile1 from '../../assets/profile-images/Ellipse -3.png';
-import profile2 from '../../assets/profile-images/Ellipse 1.png';
+import profile2 from '../../assets/profile-images/Ellipse -1.png';
 import profile3 from '../../assets/profile-images/Ellipse -8.png';
 import profile4 from '../../assets/profile-images/Ellipse -7.png';
 import React, { useState,useEffect } from "react";
@@ -8,15 +8,12 @@ import './payroll-form.scss';
 import logo from '../../assets/logo.png';
 import EmployeeService from '../../services/EmployeeService'
 const Payrollform = (props) => {
-    if (window.location.pathname !== "/update") {
-        localStorage.setItem("employeeData", null);
-    }
-    const employeeData = JSON.parse(localStorage.getItem("employeeData"));
+
     let initialValue = {
         name: '',
         profileArray: [
             { url: '../../assets/profile-images/Ellipse -3.png' },
-            { url: '../../assets/profile-images/Ellipse 1.png' },
+            { url: '../../assets/profile-images/Ellipse -1.png' },
             { url: '../../assets/profile-images/Ellipse -8.png' },
             { url: '../../assets/profile-images/Ellipse -7.png' }
         ],
@@ -50,16 +47,7 @@ const Payrollform = (props) => {
 
     const {id} = useParams();
 
-    if (employeeData) {
-        console.log(employeeData);
-        formValue.name = employeeData.name;
-        formValue.profileUrl = employeeData.profileUrl;
-        formValue.gender = employeeData.gender;
-        formValue.department = employeeData.department;
-        formValue.salary = employeeData.salary;
-        formValue.startDate = employeeData.startDate;
-        formValue.salary = employeeData.salary;
-    }
+  
     useEffect(() => {
 
         employeeService.getEmployeeById(id).then((response) =>
@@ -238,7 +226,7 @@ const Payrollform = (props) => {
                                 <img className="profile" id='image1' src={profile1} alt="profile" />
                             </label>
                             <label>
-                                <input type="radio" checked={formValue.profileUrl === "../../assets/profile-images/Ellipse 1.png"} name="profileUrl" value="../../assets/profile-images/Ellipse 1.png" onChange={changeValue} />
+                                <input type="radio" checked={formValue.profileUrl === "../../assets/profile-images/Ellipse -1.png"} name="profileUrl" value="../../assets/profile-images/Ellipse -1.png" onChange={changeValue} />
                                 <img className="profile" id='image1' src={profile2} alt="profile" />
                             </label>
                             <label>
